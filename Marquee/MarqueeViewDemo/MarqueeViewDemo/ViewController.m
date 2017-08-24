@@ -7,8 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "MarqueeView.h"
 
 @interface ViewController ()
+
+@property (weak, nonatomic) IBOutlet MarqueeView *marqueeView;
 
 @end
 
@@ -16,14 +19,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    self.marqueeView.content = @"准备来一场华丽的冒险！！";
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)start:(id)sender {
+    [self.marqueeView start];
+}
+
+- (IBAction)pause:(id)sender {
+    [self.marqueeView pause];
+}
+
+- (IBAction)reset:(id)sender {
+    [self.marqueeView reset];
+}
 
 @end

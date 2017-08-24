@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,8 +20,73 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gsO-ix-zbo" customClass="MarqueeView">
+                                <rect key="frame" x="0.0" y="45" width="375" height="40"/>
+                                <color key="backgroundColor" red="0.95294117649999999" green="0.21960784310000001" blue="0.45098039220000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="yyH-9m-Grp"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a6w-QB-yHC">
+                                <rect key="frame" x="127" y="174" width="120" height="60"/>
+                                <color key="backgroundColor" red="0.42891754170000002" green="1" blue="0.49635346349999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="6Yb-OF-tet"/>
+                                    <constraint firstAttribute="width" constant="120" id="UhM-Bz-DGu"/>
+                                </constraints>
+                                <state key="normal" title="开始">
+                                    <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="start:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fJJ-l1-DW3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cQi-3D-inl">
+                                <rect key="frame" x="127" y="276" width="120" height="60"/>
+                                <color key="backgroundColor" red="0.34042420769999998" green="0.2312352308" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="FuL-Gn-he4"/>
+                                    <constraint firstAttribute="height" constant="60" id="O6q-ZA-jtv"/>
+                                </constraints>
+                                <state key="normal" title="暂停">
+                                    <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="pause:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p0p-ON-Gsc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4zI-vD-Wex">
+                                <rect key="frame" x="127" y="375" width="120" height="60"/>
+                                <color key="backgroundColor" red="0.95294117649999999" green="0.21960784310000001" blue="0.45098039220000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="27k-nk-5iu"/>
+                                    <constraint firstAttribute="width" constant="120" id="kQA-ek-SBg"/>
+                                </constraints>
+                                <state key="normal" title="重置">
+                                    <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="reset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hn5-GR-Xkb"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="4zI-vD-Wex" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3fz-0I-2Gt"/>
+                            <constraint firstAttribute="trailing" secondItem="gsO-ix-zbo" secondAttribute="trailing" id="8H0-Ra-oXC"/>
+                            <constraint firstItem="4zI-vD-Wex" firstAttribute="top" secondItem="cQi-3D-inl" secondAttribute="bottom" constant="39" id="PjT-QM-w6Z"/>
+                            <constraint firstItem="a6w-QB-yHC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SLx-U3-iqf"/>
+                            <constraint firstItem="a6w-QB-yHC" firstAttribute="top" secondItem="gsO-ix-zbo" secondAttribute="bottom" constant="89" id="TTx-Tx-lLa"/>
+                            <constraint firstItem="cQi-3D-inl" firstAttribute="top" secondItem="a6w-QB-yHC" secondAttribute="bottom" constant="42" id="ZZv-6c-JXP"/>
+                            <constraint firstItem="gsO-ix-zbo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="tMI-xt-cbo"/>
+                            <constraint firstItem="gsO-ix-zbo" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="25" id="ysp-9U-pgJ"/>
+                            <constraint firstItem="cQi-3D-inl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="z6J-M9-L50"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="marqueeView" destination="gsO-ix-zbo" id="AkY-SZ-iEH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

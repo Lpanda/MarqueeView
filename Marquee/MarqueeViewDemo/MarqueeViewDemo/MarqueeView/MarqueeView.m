@@ -59,6 +59,7 @@
                                                        block:^(NSTimer * _Nonnull timer){
             [weakSelf refreshLabelFrame];
         }];
+        [[NSRunLoop currentRunLoop] addTimer:_mainTimer forMode:NSRunLoopCommonModes];
     }
     return _mainTimer;
 }
