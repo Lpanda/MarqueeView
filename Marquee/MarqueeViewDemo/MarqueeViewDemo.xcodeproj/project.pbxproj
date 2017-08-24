@@ -15,6 +15,8 @@
 		0D8ACB411F4EB0CA0078E8A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D8ACB3F1F4EB0CA0078E8A6 /* LaunchScreen.storyboard */; };
 		0D8ACB4C1F4EB0CA0078E8A6 /* MarqueeViewDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D8ACB4B1F4EB0CA0078E8A6 /* MarqueeViewDemoTests.m */; };
 		0D8ACB571F4EB0CA0078E8A6 /* MarqueeViewDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D8ACB561F4EB0CA0078E8A6 /* MarqueeViewDemoUITests.m */; };
+		0D8ACB681F4EB13E0078E8A6 /* MarqueeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D8ACB661F4EB13E0078E8A6 /* MarqueeView.m */; };
+		0D8ACB691F4EB13E0078E8A6 /* MarqueeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D8ACB671F4EB13E0078E8A6 /* MarqueeView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,9 @@
 		0D8ACB521F4EB0CA0078E8A6 /* MarqueeViewDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarqueeViewDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D8ACB561F4EB0CA0078E8A6 /* MarqueeViewDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MarqueeViewDemoUITests.m; sourceTree = "<group>"; };
 		0D8ACB581F4EB0CA0078E8A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0D8ACB651F4EB13E0078E8A6 /* MarqueeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarqueeView.h; sourceTree = "<group>"; };
+		0D8ACB661F4EB13E0078E8A6 /* MarqueeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarqueeView.m; sourceTree = "<group>"; };
+		0D8ACB671F4EB13E0078E8A6 /* MarqueeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MarqueeView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +106,7 @@
 		0D8ACB301F4EB0CA0078E8A6 /* MarqueeViewDemo */ = {
 			isa = PBXGroup;
 			children = (
+				0D8ACB641F4EB1260078E8A6 /* MarqueeView */,
 				0D8ACB341F4EB0CA0078E8A6 /* AppDelegate.h */,
 				0D8ACB351F4EB0CA0078E8A6 /* AppDelegate.m */,
 				0D8ACB371F4EB0CA0078E8A6 /* ViewController.h */,
@@ -138,6 +144,16 @@
 				0D8ACB581F4EB0CA0078E8A6 /* Info.plist */,
 			);
 			path = MarqueeViewDemoUITests;
+			sourceTree = "<group>";
+		};
+		0D8ACB641F4EB1260078E8A6 /* MarqueeView */ = {
+			isa = PBXGroup;
+			children = (
+				0D8ACB651F4EB13E0078E8A6 /* MarqueeView.h */,
+				0D8ACB661F4EB13E0078E8A6 /* MarqueeView.m */,
+				0D8ACB671F4EB13E0078E8A6 /* MarqueeView.xib */,
+			);
+			path = MarqueeView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,6 +265,7 @@
 				0D8ACB411F4EB0CA0078E8A6 /* LaunchScreen.storyboard in Resources */,
 				0D8ACB3E1F4EB0CA0078E8A6 /* Assets.xcassets in Resources */,
 				0D8ACB3C1F4EB0CA0078E8A6 /* Main.storyboard in Resources */,
+				0D8ACB691F4EB13E0078E8A6 /* MarqueeView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +293,7 @@
 				0D8ACB391F4EB0CA0078E8A6 /* ViewController.m in Sources */,
 				0D8ACB361F4EB0CA0078E8A6 /* AppDelegate.m in Sources */,
 				0D8ACB331F4EB0CA0078E8A6 /* main.m in Sources */,
+				0D8ACB681F4EB13E0078E8A6 /* MarqueeView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
